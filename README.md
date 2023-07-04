@@ -7,6 +7,7 @@ Remote Computer :
 
 
 # Etape 2 : Installation des plugins Ansible dont nous avons besoin
+# Fonctionne à partir de la version Ansible 2.12 et antérieur
 ansible-galaxy collection install community.windows 
 
 ansible-galaxy collection install ansible.windows
