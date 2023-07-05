@@ -27,4 +27,5 @@ sudo apt install python3-winrm
 # Etape4 : Lancement du playbook Ansible
 sudo -E /home/ansible/.local/bin/ansible -i inventory.ini SRV-AD -m win_ping  # Test de ping avec WinRM depuis Ansible
 
-ansible-playbook -i inventory.ini sequences.yaml # Execution du playbook
+ansible-playbook -i inventory.ini scripts_windows/deploy_AD_on_proxmox.yml # Execution du yaml pour déployer le contrôleur de domaine sur un serveur windows
+ansible-playbook -i inventory.ini scripts_windows/deploy_RDS_on_proxmox.yml # Execution du yaml pour déployer l'ensemble de la configuration RDS
