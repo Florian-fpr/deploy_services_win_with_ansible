@@ -1,0 +1,11 @@
+---
+- name: Exécuter les fichiers YAML en séquence
+  hosts: SRV-AD
+  gather_facts: false
+  tasks:
+    - name: Inclure le premier fichier YAML
+      include: script_windows/deploy_AD_on_proxmox.yml
+
+    - name: Inclure le deuxième fichier YAML
+      include: script_windows/deploy_RDS_on_proxmox.yml
+
