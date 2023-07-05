@@ -23,3 +23,7 @@ sudo python3 get-pip.py --user
 sudo python3 -m pip install --user ansible
 
 sudo apt install python3-winrm
+
+# Etape4 : Lancement du playbook Ansible
+sudo -E /home/ansible/.local/bin/ansible -i inventory.ini SRV-AD -m win_ping  # Test de ping avec WinRM depuis Ansible
+ansible-playbook -i inventory.ini sequences.yaml # Execution du playbook
